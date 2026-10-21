@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ferramenta para organizar observa&#231;&#245;es e montar pareceres descritivos de Pr&#233; I e Pr&#233; II." />
+    <title>Montador de Pareceres Descritivos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Ir para o conte&#250;do</a>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Navega&#231;&#227;o principal">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">MP</span>
+          <div><strong>Montador</strong><small>Pareceres Descritivos</small></div>
+        </div>
+        <nav id="nav" class="nav-list"></nav>
+        <div class="privacy-note">
+          <span aria-hidden="true">&#128274;</span>
+          <p><strong>Privacidade local</strong><br />Os dados ficam somente neste navegador.</p>
+        </div>
+      </aside>
+
+      <div class="workspace">
+        <header class="topbar">
+          <button id="menuButton" class="icon-button menu-button" type="button" aria-label="Abrir menu">&#9776;</button>
+          <div class="progress-wrap" aria-label="Progresso do parecer">
+            <span id="progressLabel">In&#237;cio</span>
+            <div class="progress-track"><span id="progressBar"></span></div>
+          </div>
+          <button id="newReportTop" class="button button-secondary" type="button">+ Novo parecer</button>
+        </header>
+
+        <main id="main" tabindex="-1"></main>
+      </div>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <dialog id="confirmDialog" class="modal">
+      <form method="dialog">
+        <h2>Come&#231;ar outro parecer?</h2>
+        <p>O parecer atual ser&#225; mantido como rascunho neste navegador.</p>
+        <div class="modal-actions">
+          <button value="cancel" class="button button-ghost">Cancelar</button>
+          <button value="confirm" class="button button-primary">Salvar e come&#231;ar</button>
+        </div>
+      </form>
+    </dialog>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
